@@ -19,12 +19,7 @@ Before you begin, ensure you have the following:
 	|- archives/
   |- events/
 	|- handlers/
-		|- libs/
-			|- ddbDocClient.mjs
 		|- create.mjs
-		|- get.mjs
-		|- update.mjs
-		|- delete.mjs
 |- locals.tf
 |- provider.tf
 |- terraform.tfvars.tf
@@ -42,7 +37,7 @@ Before you begin, ensure you have the following:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/FonNkwenti/tf-private-apigw.git
+   git clone https://github.com/sukalyan132/privateapiforlambda.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -74,14 +69,3 @@ Remove all resources created by Terraform.
    terraform destroy
    ```
 
----
-
-## Tutorials
-[Private Serverless REST API with API Gateway: Lambda, DynamoDB, VPC Endpoints & Terraform - Part 1](https://www.serverlessguru.com/blog/private-serverless-rest-api-with-api-gateway-lambda-dynamodb-vpc-endpoints-terraform---part-1)
-
-[Private Serverless REST API with API Gateway: Lambda, DynamoDB, VPC Endpoints & Terraform - Part 2](https://www.serverlessguru.com/blog/private-serverless-rest-api-with-api-gateway-lambda-dynamodb-vpc-endpoints-terraform---part-2)
-
-
-## License
-
-This project is licensed under the MIT License - see the `LICENSE` file for details.
