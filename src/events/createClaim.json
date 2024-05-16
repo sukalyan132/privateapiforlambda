@@ -1,0 +1,126 @@
+{
+    "resource": "/claim",
+    "path": "/claim",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "CloudFront-Forwarded-Proto": "https",
+        "CloudFront-Is-Desktop-Viewer": "true",
+        "CloudFront-Is-Mobile-Viewer": "false",
+        "CloudFront-Is-SmartTV-Viewer": "false",
+        "CloudFront-Is-Tablet-Viewer": "false",
+        "CloudFront-Viewer-ASN": "15964",
+        "CloudFront-Viewer-Country": "CM",
+        "Content-Type": "application/json",
+        "Host": "xyz7ug7o5f.execute-api.us-west-1.amazonaws.com",
+        "Postman-Token": "335fcceb-7b96-45b0-a414-321fdc045c1f",
+        "User-Agent": "PostmanRuntime/7.32.2",
+        "Via": "1.1 8550fccb865aec06cbc12a054e9c2728.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "BX0BQudMxmkbKZXXu0UjwFNPrGdkycqSk4w5yVa9VVoNPswTs85SXQ==",
+        "X-Amzn-Trace-Id": "Root=1-64463bae-72a466d578abdd4379128fe6",
+        "X-Forwarded-For": "154.72.170.196, 70.132.28.158",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "CloudFront-Forwarded-Proto": [
+            "https"
+        ],
+        "CloudFront-Is-Desktop-Viewer": [
+            "true"
+        ],
+        "CloudFront-Is-Mobile-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-SmartTV-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-Tablet-Viewer": [
+            "false"
+        ],
+        "CloudFront-Viewer-ASN": [
+            "15964"
+        ],
+        "CloudFront-Viewer-Country": [
+            "CM"
+        ],
+        "Content-Type": [
+            "application/json"
+        ],
+        "Host": [
+            "xyz7ug7o5f.execute-api.us-west-1.amazonaws.com"
+        ],
+        "Postman-Token": [
+            "335fcceb-7b96-45b0-a414-321fdc045c1f"
+        ],
+        "User-Agent": [
+            "PostmanRuntime/7.32.2"
+        ],
+        "Via": [
+            "1.1 8550fccb865aec06cbc12a054e9c2728.cloudfront.net (CloudFront)"
+        ],
+        "X-Amz-Cf-Id": [
+            "BX0BQudMxmkbKZXXu0UjwFNPrGdkycqSk4w5yVa9VVoNPswTs85SXQ=="
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-64463bae-72a466d578abdd4379128fe6"
+        ],
+        "X-Forwarded-For": [
+            "154.72.170.196, 70.132.28.158"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": {
+        "policyId": "123",
+        "memberId": "123",
+        "memberName": "John Doe"
+    },
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "0rard4",
+        "resourcePath": "/claim",
+        "httpMethod": "POST",
+        "extendedRequestId": "D35DTEvuyK4FYYg=",
+        "requestTime": "24/Apr/2023:08:19:58 +0000",
+        "path": "/dev/claim",
+        "accountId": "404148889442",
+        "protocol": "HTTP/1.1",
+        "stage": "dev",
+        "domainPrefix": "xyz7ug7o5f",
+        "requestTimeEpoch": 1682324398425,
+        "requestId": "6ceae6c0-1956-4e5f-9223-c72344405745",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "154.72.170.196",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "PostmanRuntime/7.32.2",
+            "user": null
+        },
+        "domainName": "https://4oxteev1d8.execute-api.eu-central-1.amazonaws.com/dev/claim",
+        "apiId": "4oxteev1d8"
+    },
+    "body":"{\"policyType\": \"Health\", \"claimAmount\": 500, \"description\": \"snow accident\", \"status\": \"pending\"}"
+    ,
+    "isBase64Encoded": false
+  }
