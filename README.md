@@ -28,7 +28,6 @@ Before you begin, ensure you have the following:
 |- lambda.tf
 |- security-groups.tf
 |- apigw.tf
-|- ec2.tf
 |- client-vpc.tf
 ```
 ---

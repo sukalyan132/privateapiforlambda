@@ -114,26 +114,7 @@ resource "aws_vpc_peering_connection" "api_client_vpc_peering" {
 
 ###########################################
 # DNS resolution for private api endpoint
-###########################################
-
-# route53 inbound resolver endpoint
-resource "aws_route53_resolver_endpoint" "inbound_resolver_ep" {
-  name = "private-api-inbound-resolver-endpoint"
-  direction      = "INBOUND"
-  security_group_ids = [aws_security_group.inbound_resolver_ep_sg.id]
-  ip_address {
-    subnet_id = aws_subnet.private_sn_az1.id
-    ip = "10.0.1.10"
-  }
-  ip_address {
-    subnet_id = aws_subnet.private_sn_az2.id
-    ip = "10.0.2.10"
-  }
-  tags = {
-    Name = "private-api-inbound-resolver-endpoint"
-
-  }
-}
+##########################################
 
 
 
@@ -177,42 +158,3 @@ resource "aws_vpc_endpoint_policy" "execute_api_ep_policy" {
 }
 
 
-#####################################
-# vpc endpoint for the SSM Manager private access to api-vpc
-#####################################
-resource "aws_vpc_endpoint" "ssm2_ep" {
-  vpc_endpoint_type   = "Interface"
-  private_dns_enabled = true
-  service_name        = "com.amazonaws.${var.region}.ssm"
-
-  vpc_id              = aws_vpc.api_vpc.id
-  security_group_ids  = [aws_security_group.ssm2_ep_sg.id]
-  subnet_ids          = [aws_subnet.private_sn_az1.id]
-  tags = {
-    Name = "ssm2-endpoint"
-  }
-}
-resource "aws_vpc_endpoint" "ssm2_messages_ep" {
-  vpc_endpoint_type   = "Interface"
-  private_dns_enabled = true
-  service_name        = "com.amazonaws.${var.region}.ssmmessages"
-
-  vpc_id              = aws_vpc.api_vpc.id
-  security_group_ids  = [aws_security_group.ssm2_ep_sg.id]
-  subnet_ids          = [aws_subnet.private_sn_az1.id]
-  tags = {
-    Name = "ssm2-messages-endpoint"
-  }
-}
-
-
-resource "aws_vpc_endpoint" "ddb_ep" {
-  service_name = "com.amazonaws.${var.region}.dynamodb"
-  vpc_endpoint_type = "Gateway"
-  vpc_id = aws_vpc.api_vpc.id
-  route_table_ids = [aws_route_table.private_rt_az1.id, aws_route_table.private_rt_az2.id]
-    tags = {
-    Name = "dynamodb-gateway-endpoint"
-  }
-
-}
